@@ -16,14 +16,25 @@ function employeeCard(name, position) {
     removeButton.setAttribute("class", "remove-button")
     removeButton.addEventListener("click", () => {
     card.remove();
+// Task 4 
+    removeButton.addEventListener("click", (event) =>{
+        event.stopPropagation
+        card.remove()
+    })
+    const employeeContainer = document.getElementById("employeeContainer");
+    employeeContainer.addEventListener("click", () => {
+    // Log a message when any card is clicked
+    console.log("An employee card was clicked!");
+});
 })
     card.appendChild(cardHeading)
     card.appendChild(paragraphPosition)
     card.appendChild(removeButton)
 
     const employeeContainer = document.getElementById("employeeContainer")
-    employeeContainer.appendChild(card);
+    employeeContainer.appendChild(card); 
 }
+
 //Employee
 employeeCard("The Joker", "Founder")
 employeeCard("Harley Quinn", "Co-Founder")
