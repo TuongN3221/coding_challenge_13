@@ -24,6 +24,22 @@ function employeeCard(name, position) {
     const employeeContainer = document.getElementById("employeeContainer")
     employeeContainer.appendChild(card);
 }
-//Example
-employeeCard("John Doe", "Founder")
-employeeCard("Jane Doe", "Writer")
+//Employee
+employeeCard("The Joker", "Founder")
+employeeCard("Harley Quinn", "Co-Founder")
+employeeCard("Oswald Cobblepot", "Chief Financial Officer")
+
+// Task 3
+function highlightEmployee() {
+    const getEmployeeCard = document.querySelectorAll(".employee-card")
+    const employeeCardArray = Array.from(getEmployeeCard)
+
+    employeeCardArray.forEach((card) => {
+        card.style.backgroundColor = `lightblue`;
+        card.style.border = `1px solid blue`;
+        card.style.padding = '10px';
+    })
+}
+highlightEmployee();
+
+
