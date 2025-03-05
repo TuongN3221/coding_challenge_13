@@ -16,16 +16,14 @@ function employeeCard(name, position) {
     removeButton.setAttribute("class", "remove-button")
     removeButton.addEventListener("click", () => {
     card.remove();
-// Task 4 
-    removeButton.addEventListener("click", (event) =>{
-        event.stopPropagation
-        card.remove()
-    })
-    const employeeContainer = document.getElementById("employeeContainer");
-    employeeContainer.addEventListener("click", () => {
-    // Log a message when any card is clicked
-    console.log("An employee card was clicked!");
+
 });
+// Task 4
+document.querySelectorAll(".employee-card").forEach(card => {
+    card.addEventListener("click", (event) =>{
+        console.log("An Employee card has been clicked")
+        event.stopPropagation()
+    })
 })
     card.appendChild(cardHeading)
     card.appendChild(paragraphPosition)
